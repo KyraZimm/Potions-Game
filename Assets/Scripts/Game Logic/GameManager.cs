@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] ConfigSO configFile;
+    //[SerializeField] ConfigSO configFile;
     public static GameManager Instance { get; private set; }
 
     private void Awake() {
@@ -21,7 +21,9 @@ public class GameManager : MonoBehaviour
 
     private static void InitializeGameRun() {
 
+        ConfigSO configInstance = ConfigSO.Instance;
+
         //initialize game logic static classes & singletons
-        IngredientLibrary.Init(Instance.configFile);
+        IngredientLibrary.Init(configInstance);
     }
 }

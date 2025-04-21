@@ -5,6 +5,7 @@ using UnityEngine;
 public static class IngredientLibrary
 {
     private static Dictionary<string, IngredientData> _allIngredientData = new Dictionary<string, IngredientData>();
+
     public static void Init(ConfigSO config) {
         ReadDataFromConfig(config.IngredientDataSO.IngredientsData);
     }
@@ -16,4 +17,19 @@ public static class IngredientLibrary
             Debug.Log($"Deserialized Ingredient: {data.ID}");
         }
     }
+
+#if UNITY_EDITOR
+    public static string[] GetAllIngredientIDs_EditorOnly() {
+        _allIngredientData.Clear();
+
+        IngredientData[] data = ConfigSO.Instance.IngredientDataSO.IngredientsData;
+        ReadDataFromConfig(data);
+
+        List<string> allIDs = new List<string>();
+        allIDs.AddRange(_allIngredientData.Keys);
+        allIDs.Sort(); //alphabetize
+
+        return allIDs.ToArray();
+    }
+#endif
 }

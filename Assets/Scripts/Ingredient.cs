@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ingredient : Interactable
 {
-    public IngredientData Data { get; private set; }
+    [SerializeField][WritableDropdown(typeof(IngredientLibrary), "GetAllIngredientIDs_EditorOnly")] string ingredientID;
 }
 
 [System.Serializable]
