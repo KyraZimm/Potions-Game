@@ -483,6 +483,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &791778513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5070963229443037730, guid: 3ba50b48a6e85fa42b65ab71dc0766dc, type: 3}
+  m_PrefabInstance: {fileID: 570114623414708366}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21592bd386e0ef9419360ee850bd3ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &800485338
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aea9489681afbe4497d4ce6353715c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  progressUI: {fileID: 791778513}
 --- !u!1 &906925791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2104950900}
+  ingredientID: Test Flower 1
 --- !u!1001 &570114623414708366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1256,6 +1269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potion Progress Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8633259146481870842, guid: 3ba50b48a6e85fa42b65ab71dc0766dc, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

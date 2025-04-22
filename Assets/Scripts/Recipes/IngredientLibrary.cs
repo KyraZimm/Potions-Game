@@ -18,6 +18,10 @@ public static class IngredientLibrary
         }
     }
 
+    public static IngredientData GetData(string id) {
+        return _allIngredientData[id];
+    }
+
 #if UNITY_EDITOR
     public static string[] GetAllIngredientIDs_EditorOnly() {
         _allIngredientData.Clear();
