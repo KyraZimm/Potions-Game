@@ -15,7 +15,9 @@ MonoBehaviour:
   IngredientsData:
   - ID: Test Flower 1
     EffectNodes:
-    - NodePos: {x: 1, y: 0}
-    - NodePos: {x: -1, y: 0}
+    - EffectType: 1
+      NodePos: {x: 1, y: 0}
+    - EffectType: 0
+      NodePos: {x: -1, y: 0}
     HorizontalDir: 1
     VerticalDir: 0

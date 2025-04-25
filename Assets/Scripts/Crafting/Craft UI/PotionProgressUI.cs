@@ -21,7 +21,7 @@ public class PotionProgressUI : MonoBehaviour
 
         //render ingredient nodes
         IngredientData ingData = IngredientLibrary.GetData(ingredient.ID);
-        foreach (PotionEffectData nodeData in ingData.EffectNodes) {
+        foreach (PotionNodeData nodeData in ingData.EffectNodes) {
             Vector2 posOnCanvas = canvasOrigin + (nodeData.NodePos * scaleCanvasUnit);
             PotionEffectNode node = Instantiate(nodePrefab, transform).GetComponent<PotionEffectNode>();
             node.Init(nodeData.EffectType);

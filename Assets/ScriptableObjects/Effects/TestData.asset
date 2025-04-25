@@ -9,8 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ba100dd9e4fb745a43267484d0ec4a, type: 3}
-  m_Name: Config
+  m_Script: {fileID: 11500000, guid: 24d361428a37f074ea2b3a94f20c95f9, type: 3}
+  m_Name: TestData
   m_EditorClassIdentifier: 
-  IngredientData: {fileID: 11400000, guid: b97c29327200afc439c2e90a0d0a318a, type: 2}
-  PotionEffectData: {fileID: 11400000, guid: 03ec4077a7e9c9342a4473994252d3aa, type: 2}
+  EffectData:
+  - Effect: 0
+    Icon: {fileID: 0}
+    Color: {r: 1, g: 0, b: 0, a: 1}
+  - Effect: 1
+    Icon: {fileID: 0}
+    Color: {r: 0.25349855, g: 1, b: 0, a: 1}

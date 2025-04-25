@@ -7,7 +7,7 @@ public static class IngredientLibrary
     private static Dictionary<string, IngredientData> _allIngredientData = new Dictionary<string, IngredientData>();
 
     public static void Init(ConfigSO config) {
-        ReadDataFromConfig(config.IngredientDataSO.IngredientsData);
+        ReadDataFromConfig(config.IngredientData.IngredientsData);
     }
     
     private static void ReadDataFromConfig(IngredientData[] configData) {
@@ -24,9 +24,7 @@ public static class IngredientLibrary
 
 #if UNITY_EDITOR
     public static string[] GetAllIngredientIDs_EditorOnly() {
-        _allIngredientData.Clear();
-
-        IngredientData[] data = ConfigSO.Instance.IngredientDataSO.IngredientsData;
+        IngredientData[] data = ConfigSO.Instance.IngredientData.IngredientsData;
         ReadDataFromConfig(data);
 
         List<string> allIDs = new List<string>();

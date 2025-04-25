@@ -12,7 +12,7 @@ public class Ingredient : Interactable
 [System.Serializable]
 public struct IngredientData {
     public string ID;
-    public PotionEffectData[] EffectNodes;
+    public PotionNodeData[] EffectNodes;
     public PotionEffectHorizontal HorizontalDir;
     public PotionEffectVertical VerticalDir;
 }
