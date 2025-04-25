@@ -8,7 +8,7 @@ public class PotionProgressUI : MonoBehaviour
     [SerializeField] private int scaleCanvasUnit;
 
     private List<string> ingredients = new List<string>();
-    private List<GameObject> nodes = new List<GameObject>();
+    private List<PotionEffectNode> nodes = new List<PotionEffectNode>();
 
     private Vector2 canvasOrigin;
 
@@ -16,26 +16,23 @@ public class PotionProgressUI : MonoBehaviour
         canvasOrigin = transform.position;
     }
 
-    public void StartNewRecipe(Ingredient baseIngredient) {
-        ingredients.Clear();
-        ingredients.Add(baseIngredient.ID);
+    public void AddIngredient(Ingredient ingredient) {
+        ingredients.Add(ingredient.ID);
 
         //render ingredient nodes
-        IngredientData ingData = IngredientLibrary.GetData(baseIngredient.ID);
-        foreach (PotionEffectNode node in ingData.EffectNodes) {
-            Vector2 posOnCanvas = canvasOrigin + (node.NodePos * scaleCanvasUnit);
-            GameObject nodeGO = Instantiate(nodePrefab, transform);
-            nodes.Add(nodeGO);
+        IngredientData ingData = IngredientLibrary.GetData(ingredient.ID);
+        foreach (PotionEffectData nodeData in ingData.EffectNodes) {
+            Vector2 posOnCanvas = canvasOrigin + (nodeData.NodePos * scaleCanvasUnit);
+            PotionEffectNode node = Instantiate(nodePrefab, transform).GetComponent<PotionEffectNode>();
+            node.Init(nodeData.EffectType);
 
-            RectTransform nodeRect = nodeGO.GetComponent<RectTransform>();
+            nodes.Add(node);
+
+            RectTransform nodeRect = node.gameObject.GetComponent<RectTransform>();
             nodeRect.position = posOnCanvas;
         }
     }
-}
 
-[System.Serializable]
-public struct PotionEffectNode {
-    public Vector2Int NodePos;
 }
 
 //can prob collapse these enums into 1 axis type later, keeping them seperate for now for naming convenience
