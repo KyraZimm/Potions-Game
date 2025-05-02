@@ -7,6 +7,7 @@ public enum PotionEffectType { Health, Poison }
 public class PotionEffectNode : MonoBehaviour
 {
     [SerializeField] Image img;
+    [SerializeField] Image highlight;
 
     PotionEffectType effectType;
 
@@ -29,7 +30,7 @@ public class PotionEffectNode : MonoBehaviour
         }
 
         RenderEffectVisuals();
-
+        highlight.enabled = false;
     }
 
     private void ReadDataFromConfig(PotionEffectData[] configData) {
@@ -48,6 +49,8 @@ public class PotionEffectNode : MonoBehaviour
 
         img.color = effectData.Color;
     }
+
+    public void Highlight(bool active){ highlight.enabled = active; }
 }
 
 [System.Serializable]

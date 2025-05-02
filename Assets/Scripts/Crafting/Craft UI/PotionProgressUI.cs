@@ -73,13 +73,20 @@ public class PotionProgressUI : MonoBehaviour
             nodesByCoords[key] = null;
         }
         nodesByCoords.Clear();
+
+        currNodeCoords = Vector2Int.zero;
     }
 
     private void RedrawProgressLine() {
         lineRenderer.positionCount = potionProgress.Count;
         for (int i = 0; i < potionProgress.Count; i++){
             lineRenderer.SetPosition(i, potionProgress[i].transform.position);
+            potionProgress[i].Highlight(true);
         }
+    }
+
+    public void FinishPotion(){
+
     }
 
 }
