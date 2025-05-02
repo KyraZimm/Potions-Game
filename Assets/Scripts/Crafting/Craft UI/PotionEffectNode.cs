@@ -29,6 +29,7 @@ public class PotionEffectNode : MonoBehaviour
         }
 
         RenderEffectVisuals();
+
     }
 
     private void ReadDataFromConfig(PotionEffectData[] configData) {
