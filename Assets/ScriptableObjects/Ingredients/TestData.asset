@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestData
   m_EditorClassIdentifier: 
   IngredientsData:
-  - ID: Test Flower 1
+  - ID: Test Vial 1
     EffectNodes:
     - EffectType: 1
       NodePos: {x: 1, y: 0}
@@ -21,3 +21,11 @@ MonoBehaviour:
       NodePos: {x: -1, y: 0}
     HorizontalDir: 1
     VerticalDir: 0
+  - ID: Test Vial 2
+    EffectNodes:
+    - EffectType: 1
+      NodePos: {x: 0, y: 1}
+    - EffectType: 0
+      NodePos: {x: 0, y: -1}
+    HorizontalDir: 0
+    VerticalDir: -1

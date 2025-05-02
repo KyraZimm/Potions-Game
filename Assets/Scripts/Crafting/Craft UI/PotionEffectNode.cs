@@ -11,7 +11,6 @@ public class PotionEffectNode : MonoBehaviour
     PotionEffectType effectType;
 
     private static Dictionary<PotionEffectType, PotionEffectData> effectDataByType = new Dictionary<PotionEffectType, PotionEffectData>();
-
     private static bool EffectDictionaryInitialized(){ return effectDataByType != null && effectDataByType.Count > 0; }
 
     public void Init(PotionEffectType initAsType) {
