@@ -67,10 +67,10 @@ public class PotionProgressUI : MonoBehaviour
     public void ResetPotion() {
         potionProgress.Clear();
         lineRenderer.positionCount = 0;
-        foreach (Vector2Int key in nodesByCoords.Keys) {
-            PotionEffectNode node = nodesByCoords[key];
-            GameObject.Destroy(node.gameObject);
-            nodesByCoords[key] = null;
+
+        List<PotionEffectNode> tmp = new List<PotionEffectNode>(nodesByCoords.Values);
+        for (int i = tmp.Count - 1; i >= 0; i--) {
+            Destroy(tmp[i].gameObject);
         }
         nodesByCoords.Clear();
 
