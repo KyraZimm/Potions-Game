@@ -2689,33 +2689,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1771733368564543485, guid: b90daddf2e1c97f4fa269a5502fd4b99, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771733368564543485, guid: b90daddf2e1c97f4fa269a5502fd4b99, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771733368564543485, guid: b90daddf2e1c97f4fa269a5502fd4b99, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 791778513}
-    - target: {fileID: 1771733368564543485, guid: b90daddf2e1c97f4fa269a5502fd4b99, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771733368564543485, guid: b90daddf2e1c97f4fa269a5502fd4b99, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: ResetPotion
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771733368564543485, guid: b90daddf2e1c97f4fa269a5502fd4b99, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: PotionProgressUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771733368564543485, guid: b90daddf2e1c97f4fa269a5502fd4b99, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5217812845151923704, guid: b90daddf2e1c97f4fa269a5502fd4b99, type: 3}
       propertyPath: m_Pivot.x
       value: 0
