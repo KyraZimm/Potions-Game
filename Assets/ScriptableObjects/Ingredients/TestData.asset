@@ -29,3 +29,11 @@ MonoBehaviour:
       NodePos: {x: 0, y: -1}
     HorizontalDir: 0
     VerticalDir: -1
+  - ID: Test Leaf
+    EffectNodes:
+    - EffectType: 0
+      NodePos: {x: 0, y: 1}
+    - EffectType: 0
+      NodePos: {x: 0, y: -1}
+    HorizontalDir: 0
+    VerticalDir: -1
