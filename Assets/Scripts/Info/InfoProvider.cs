@@ -7,6 +7,7 @@ public class InfoProvider : MonoBehaviour
     [SerializeField][WritableDropdown(typeof(HUD), "GetItemInfoIDs_EditorOnly")] private string itemID;
 
     private bool isMouseOver = false;
+    private bool sentInfoToHUD = false;
 
     private void OnMouseEnter() {
         isMouseOver = true;
@@ -14,6 +15,10 @@ public class InfoProvider : MonoBehaviour
 
     private void OnMouseExit() {
         isMouseOver = false;
+        if (sentInfoToHUD) {
+            HUD.HideInfoPanel();
+            sentInfoToHUD = false;
+        }
     }
 
     private void Update() {
@@ -21,6 +26,7 @@ public class InfoProvider : MonoBehaviour
 
         if (Input.GetButton("Info")) {
             HUD.SetInfoPanelData(itemID);
+            sentInfoToHUD = true;
         }
     }
 }

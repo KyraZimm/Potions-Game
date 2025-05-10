@@ -31,6 +31,8 @@ public class HUD : MonoBehaviour
             return;
         }
         Instance = this;
+
+        HideInfoPanel();
     }
 
     public static void SetInfoPanelData(string infoKey) {
@@ -42,6 +44,10 @@ public class HUD : MonoBehaviour
 
         Instance.infoImg.enabled = currInfoPanelData.Image != null;
         if (currInfoPanelData.Image != null) Instance.infoImg.sprite = currInfoPanelData.Image;
+    }
+
+    public static void HideInfoPanel() {
+        Instance.infoPanelRoot.SetActive(false);
     }
 
     public static void InitItemInfo(InfoSO itemInfoFile) {
