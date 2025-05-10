@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodePrefab: {fileID: 812112564383473697, guid: c398996befa3c534c81ab5040d20e98d, type: 3}
-  scaleCanvasUnit: 1
+  scaleCanvasUnit: 0.5
   lineRenderer: {fileID: 4993991904817807013}
 --- !u!1 &2529589072243999419
 GameObject:

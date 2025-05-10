@@ -20,4 +20,5 @@ public class ConfigSO : ScriptableObject
 
     public IngredientSO IngredientData;
     public PotionEffectSO PotionEffectData;
+    public InfoSO ItemInfoData;
 }

@@ -25,5 +25,6 @@ public class GameManager : MonoBehaviour
 
         //initialize game logic static classes & singletons
         IngredientLibrary.Init(configInstance);
+        HUD.InitItemInfo(configInstance.ItemInfoData);
     }
 }

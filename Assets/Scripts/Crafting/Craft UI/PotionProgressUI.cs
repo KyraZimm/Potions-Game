@@ -5,7 +5,7 @@ using UnityEngine;
 public class PotionProgressUI : MonoBehaviour
 {
     [SerializeField] private GameObject nodePrefab;
-    [SerializeField] private int scaleCanvasUnit;
+    [SerializeField] private float scaleCanvasUnit;
     [SerializeField] private LineRenderer lineRenderer;
 
     private List<string> ingredients = new List<string>();
@@ -56,8 +56,8 @@ public class PotionProgressUI : MonoBehaviour
             nodesByCoords.Add(coords, node);
 
             RectTransform nodeRect = node.gameObject.GetComponent<RectTransform>();
-            Vector2Int posOnCanvas = canvasOrigin + (coords * scaleCanvasUnit);
-            nodeRect.position = new Vector2(posOnCanvas.x, posOnCanvas.y);
+            Vector2 posOnCanvas = canvasOrigin + ((Vector2)coords * scaleCanvasUnit);
+            nodeRect.position = posOnCanvas;
         }
 
         //destroy added ingredient
