@@ -13,35 +13,15 @@ MonoBehaviour:
   m_Name: TestData
   m_EditorClassIdentifier: 
   IngredientsData:
-  - ID: Test Vial 1
-    EffectNodes:
-    - EffectType: 1
-      NodePos: {x: 1, y: 0}
-    - EffectType: 0
-      NodePos: {x: -1, y: 0}
-    HorizontalDir: 1
-    VerticalDir: 0
-  - ID: Test Vial 2
-    EffectNodes:
-    - EffectType: 1
-      NodePos: {x: 0, y: 1}
-    - EffectType: 0
-      NodePos: {x: 0, y: -1}
-    HorizontalDir: 0
-    VerticalDir: -1
   - ID: Test Leaf
     EffectNodes:
-    - EffectType: 0
-      NodePos: {x: 0, y: 1}
-    - EffectType: 0
+    - EffectType: 1
       NodePos: {x: 0, y: -1}
     HorizontalDir: 0
     VerticalDir: -1
   - ID: Test Petal
     EffectNodes:
-    - EffectType: 1
+    - EffectType: 2
       NodePos: {x: 0, y: 1}
-    - EffectType: 1
-      NodePos: {x: 0, y: -1}
     HorizontalDir: 0
     VerticalDir: 1

@@ -7,6 +7,7 @@ public class PotionProgressUI : MonoBehaviour
     [SerializeField] private GameObject nodePrefab;
     [SerializeField] private float scaleCanvasUnit;
     [SerializeField] private LineRenderer lineRenderer;
+    [SerializeField] private Transform progressChainOrigin;
 
     private List<string> ingredients = new List<string>();
     private Dictionary<Vector2Int, PotionEffectNode> nodesByCoords = new Dictionary<Vector2Int, PotionEffectNode>();
@@ -17,7 +18,7 @@ public class PotionProgressUI : MonoBehaviour
 
     private void Awake() {
         canvasOrigin = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
-        currNodeCoords = Vector2Int.zero;
+        currNodeCoords = new Vector2Int((int)progressChainOrigin.transform.position.x, (int)progressChainOrigin.transform.position.y);
     }
 
     public void AddIngredient(Ingredient ingredient) {
@@ -74,7 +75,7 @@ public class PotionProgressUI : MonoBehaviour
         }
         nodesByCoords.Clear();
 
-        currNodeCoords = Vector2Int.zero;
+        currNodeCoords = new Vector2Int((int)progressChainOrigin.transform.position.x, (int)progressChainOrigin.transform.position.y);
     }
 
     private void RedrawProgressLine() {

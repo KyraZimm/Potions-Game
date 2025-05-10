@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d361428a37f074ea2b3a94f20c95f9, type: 3}
   m_Name: TestData
   m_EditorClassIdentifier: 
-  EffectData:
-  - Effect: 0
-    Icon: {fileID: 0}
-    Color: {r: 1, g: 0, b: 0, a: 1}
+  EffectVisualData:
   - Effect: 1
     Icon: {fileID: 0}
-    Color: {r: 0.25349855, g: 1, b: 0, a: 1}
+    Color: {r: 1, g: 0, b: 0, a: 1}
+  - Effect: 2
+    Icon: {fileID: 0}
+    Color: {r: 0, g: 1, b: 0.109969616, a: 1}
+  EffectCombinations:
+  - Effect1: 1
+    Effect2: 2
+    Result: 0

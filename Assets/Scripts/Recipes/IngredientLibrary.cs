@@ -14,7 +14,6 @@ public static class IngredientLibrary
         _allIngredientData.Clear();
         foreach (IngredientData data in configData) {
             _allIngredientData.Add(data.ID, data);
-            Debug.Log($"Deserialized Ingredient: {data.ID}");
         }
     }
 

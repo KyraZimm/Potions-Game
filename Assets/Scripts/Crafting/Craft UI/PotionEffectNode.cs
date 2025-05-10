@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum PotionEffectType { Health, Poison }
+public enum PotionEffectType { None, Health, Poison }
 public class PotionEffectNode : MonoBehaviour
 {
     [SerializeField] Image img;
@@ -11,7 +11,7 @@ public class PotionEffectNode : MonoBehaviour
 
     PotionEffectType effectType;
 
-    private static Dictionary<PotionEffectType, PotionEffectData> effectDataByType = new Dictionary<PotionEffectType, PotionEffectData>();
+    private static Dictionary<PotionEffectType, PotionEffectVisualData> effectDataByType = new Dictionary<PotionEffectType, PotionEffectVisualData>();
     private static bool EffectDictionaryInitialized(){ return effectDataByType != null && effectDataByType.Count > 0; }
 
     public void Init(PotionEffectType initAsType) {
@@ -19,7 +19,7 @@ public class PotionEffectNode : MonoBehaviour
 
         //if effect data dictionary has not been initialized yet, do so now
         if (!EffectDictionaryInitialized()) {
-            ReadDataFromConfig(ConfigSO.Instance.PotionEffectData.EffectData);
+            ReadDataFromConfig(ConfigSO.Instance.PotionEffectVisualData.EffectVisualData);
         }
 
         //safety check: if there was an issue reading the config file, abort load
@@ -33,16 +33,16 @@ public class PotionEffectNode : MonoBehaviour
         highlight.enabled = false;
     }
 
-    private void ReadDataFromConfig(PotionEffectData[] configData) {
+    private void ReadDataFromConfig(PotionEffectVisualData[] configData) {
         effectDataByType.Clear();
-        foreach (PotionEffectData effectData in configData) {
+        foreach (PotionEffectVisualData effectData in configData) {
             effectDataByType.Add(effectData.Effect, effectData);
         }
     }
 
     private void RenderEffectVisuals() {
-        PotionEffectData effectData = effectDataByType[effectType];
-        if (effectData.Equals(default(PotionEffectData))) {
+        PotionEffectVisualData effectData = effectDataByType[effectType];
+        if (effectData.Equals(default(PotionEffectVisualData))) {
             Debug.LogError($"No potion effect data exists for the effect: {effectType}. Could not render.");
             return;
         }
@@ -60,8 +60,15 @@ public struct PotionNodeData {
 }
 
 [System.Serializable]
-public struct PotionEffectData {
+public struct PotionEffectVisualData {
     public PotionEffectType Effect;
     public Sprite Icon;
     public Color Color;
+}
+
+[System.Serializable]
+public struct PotionEffectCombinations {
+    public PotionEffectType Effect1;
+    public PotionEffectType Effect2;
+    public PotionEffectType Result;
 }

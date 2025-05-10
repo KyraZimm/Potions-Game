@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Potion Effects", menuName = "ScriptableObjects/Potion Effects")]
 public class PotionEffectSO : ScriptableObject
 {
-    public PotionEffectData[] EffectData;
+    public PotionEffectVisualData[] EffectVisualData;
+    public PotionEffectCombinations[] EffectCombinations;
 }

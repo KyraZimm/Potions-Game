@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Config
   m_EditorClassIdentifier: 
   IngredientData: {fileID: 11400000, guid: b97c29327200afc439c2e90a0d0a318a, type: 2}
-  PotionEffectData: {fileID: 11400000, guid: 03ec4077a7e9c9342a4473994252d3aa, type: 2}
+  PotionEffectVisualData: {fileID: 11400000, guid: 03ec4077a7e9c9342a4473994252d3aa, type: 2}
   ItemInfoData: {fileID: 11400000, guid: dcf1adcbdaecf1440bfbd3238c3aa642, type: 2}
