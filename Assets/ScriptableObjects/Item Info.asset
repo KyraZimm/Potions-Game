@@ -16,3 +16,6 @@ MonoBehaviour:
   - DisplayName: Leaf
     Description: A small green ingredient, with potent healing properties.
     Image: {fileID: 0}
+  - DisplayName: Orange Petal
+    Description: Deceptively pretty, for such a poisonous ingredient.
+    Image: {fileID: 0}

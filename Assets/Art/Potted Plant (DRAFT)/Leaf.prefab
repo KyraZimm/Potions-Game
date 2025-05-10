@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5821653733911989208}
   - component: {fileID: 6192379294604408720}
   - component: {fileID: 4016481420593070548}
-  - component: {fileID: 7965020731736122817}
+  - component: {fileID: 4166292600445502229}
   - component: {fileID: 3637730886728163495}
   m_Layer: 0
   m_Name: Leaf
@@ -120,7 +120,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7965020731736122817
+--- !u!114 &4166292600445502229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,13 +129,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1666929011367954864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6744a0a72808a014e94f4276a7f12ff6, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d40bf892d8664f9b67f0731a57a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4016481420593070548}
-  ingredientID: Test Leaf
   anim: {fileID: 5821653733911989208}
   hoverBoolAnimName: isHovering
+  ingredientID: Test Leaf
 --- !u!114 &3637730886728163495
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -51,9 +51,9 @@ public class HUD : MonoBehaviour
     }
 
     public static void InitItemInfo(InfoSO itemInfoFile) {
-        Instance.ReadDataFromConfig(itemInfoFile.ItemInfo);
+        ReadDataFromConfig(itemInfoFile.ItemInfo);
     }
-    private void ReadDataFromConfig(InfoPanelData[] configData) {
+    private static void ReadDataFromConfig(InfoPanelData[] configData) {
         itemInfo.Clear();
         foreach (InfoPanelData info in configData) {
             itemInfo.Add(info.DisplayName, info);
